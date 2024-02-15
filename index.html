@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+
+<body>
+    <h1>Watch <span id="movie">1000</span> + Movies for Free by <span class="time">24</span></h1>
+    <div class="owl-carousel owl-theme">
+        <div class="item">
+            <img src="1.webp" alt="">
+        </div>
+        <div class="item">
+            <img src="2.webp" alt="">
+        </div>
+        <div class="item">
+            <img src="3.webp" alt="">
+        </div>
+        <div class="item">
+            <img src="4.webp" alt="">
+        </div>
+        <div class="item">
+            <img src="5.webp" alt="">
+        </div>
+        <div class="item">
+            <img src="6.webp" alt="">
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="countMe/countMe.min.js"></script>
+    <script>
+        $("#movie").countMe(0,0)
+        $(".time").countMe(0,200)
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 500,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
